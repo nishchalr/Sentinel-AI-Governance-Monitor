@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background-color: #060709; background-image: linear-gradient(rgba(25,30,36,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(25,30,36,.5) 1px, transparent 1px); background-size: 30px 30px; color: #d6d9de; font-family: var(--font-mono), monospace; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+@layer components {
+ .panel { @apply border border-border bg-surface; }
+ .label { @apply font-[family-name:var(--font-orbitron)] text-[10px] tracking-widest text-slate-400; }
+ .action { @apply border border-critical bg-critical px-3 py-2 font-[family-name:var(--font-orbitron)] text-[10px] tracking-wide text-white transition hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-50; }
+ .control { @apply w-full border border-border bg-[#080b0f] px-3 py-2 text-sm text-cyber outline-none focus:border-cyan; }
+ .metric { @apply panel p-3; }
+ .metric-value { @apply mt-2 font-[family-name:var(--font-orbitron)] text-xl text-tactical; }
+ .scrollbar::-webkit-scrollbar { width: 6px; height: 6px; } .scrollbar::-webkit-scrollbar-thumb { background: #30363d; }
+}
